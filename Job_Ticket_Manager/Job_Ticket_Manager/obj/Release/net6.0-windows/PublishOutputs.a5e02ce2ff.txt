@@ -1,0 +1,11 @@
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\Job_Ticket_Manager\bin\Release\net6.0-windows\publish\Job_Ticket_Manager.exe
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\Job_Ticket_Manager\bin\Release\net6.0-windows\publish\Job_Ticket_Manager.dll
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\Job_Ticket_Manager\bin\Release\net6.0-windows\publish\Job_Ticket_Manager.deps.json
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\Job_Ticket_Manager\bin\Release\net6.0-windows\publish\Job_Ticket_Manager.runtimeconfig.json
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\Job_Ticket_Manager\bin\Release\net6.0-windows\publish\Job_Ticket_Manager.pdb
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\Job_Ticket_Manager\bin\Release\net6.0-windows\publish\Aspose.PDF.dll
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\Job_Ticket_Manager\bin\Release\net6.0-windows\publish\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\Job_Ticket_Manager\bin\Release\net6.0-windows\publish\Microsoft.Extensions.DependencyModel.dll
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\Job_Ticket_Manager\bin\Release\net6.0-windows\publish\Newtonsoft.Json.dll
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\Job_Ticket_Manager\bin\Release\net6.0-windows\publish\JobTicketEngine.dll
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\Job_Ticket_Manager\bin\Release\net6.0-windows\publish\JobTicketEngine.pdb

@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "55ecb820-ecd3-45ea-9df9-55d40a9b68c9": {
+      "ProjectGuid": "55ecb820-ecd3-45ea-9df9-55d40a9b68c9",
+      "DisplayName": "Job_Ticket_Manager",
+      "ColorIndex": 0
+    },
+    "09173675-2eae-45fa-ac12-1744d37d14d6": {
+      "ProjectGuid": "09173675-2eae-45fa-ac12-1744d37d14d6",
+      "DisplayName": "JobTicketEngine",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}

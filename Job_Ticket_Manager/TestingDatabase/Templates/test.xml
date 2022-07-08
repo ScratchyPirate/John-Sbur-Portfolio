@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<template>
+   <templateName>test.xml</templateName>
+   <templateDocumentPath>C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\TestingDatabase\Cpts 322 Milestone 8.docx</templateDocumentPath>
+   <informationObject>
+      <informationObjectType>informationStaticObject</informationObjectType>
+      <objectName>Customer First Name</objectName>
+      <objectX>0</objectX>
+      <objectY>0</objectY>
+      <objectFontSize>11</objectFontSize>
+   </informationObject>
+   <informationObject>
+      <informationObjectType>informationStaticObject</informationObjectType>
+      <objectName>Customer Last Name</objectName>
+      <objectX>12</objectX>
+      <objectY>12</objectY>
+      <objectFontSize>190</objectFontSize>
+   </informationObject>
+   <informationObject>
+      <informationObjectType>informationStaticObject</informationObjectType>
+      <objectName>Customer First Name (1)</objectName>
+      <objectX>200</objectX>
+      <objectY>725</objectY>
+      <objectFontSize>15</objectFontSize>
+   </informationObject>
+</template>

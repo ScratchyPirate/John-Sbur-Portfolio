@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<jobTicket>
+   <jobTicketDocumentPath>C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\TestingDatabase\test.docx</jobTicketDocumentPath>
+   <jobTicketFirstName>test</jobTicketFirstName>
+   <jobTicketLastName>test</jobTicketLastName>
+   <informationObject>
+      <informationObjectType>informationStaticObject</informationObjectType>
+      <objectName>Counter</objectName>
+      <objectX>0</objectX>
+      <objectY>0</objectY>
+      <objectRequired>True</objectRequired>
+      <objectFontSize>11</objectFontSize>
+      <informationTextboxText>8</informationTextboxText>
+   </informationObject>
+   <informationObject>
+      <informationObjectType>informationStaticObject</informationObjectType>
+      <objectName>Time Stamp</objectName>
+      <objectX>0</objectX>
+      <objectY>50</objectY>
+      <objectFontSize>15</objectFontSize>
+      <informationTextboxText>12:31:11PM</informationTextboxText>
+   </informationObject>
+   <informationObject>
+      <informationObjectType>informationStaticObject</informationObjectType>
+      <objectName>Template ID</objectName>
+      <objectX>500</objectX>
+      <objectY>0</objectY>
+      <objectFontSize>20</objectFontSize>
+      <informationTextboxText>1</informationTextboxText>
+   </informationObject>
+   <informationObject>
+      <informationObjectType>informationTextbox</informationObjectType>
+      <informationTextboxText></informationTextboxText>
+      <objectName>Textbox (4)</objectName>
+      <objectX>875</objectX>
+      <objectY>745</objectY>
+      <objectRequired>False</objectRequired>
+      <objectPriority>1</objectPriority>
+      <objectFontSize>11</objectFontSize>
+      <objectHeight>30</objectHeight>
+      <objectWidth>180</objectWidth>
+   </informationObject>
+   <informationObject>
+      <informationObjectType>informationTextbox</informationObjectType>
+      <informationTextboxText></informationTextboxText>
+      <objectName>test</objectName>
+      <objectX>330</objectX>
+      <objectY>160</objectY>
+      <objectRequired>False</objectRequired>
+      <objectPriority>2</objectPriority>
+      <objectFontSize>13</objectFontSize>
+      <objectHeight>92</objectHeight>
+      <objectWidth>180</objectWidth>
+   </informationObject>
+   <informationObject>
+      <informationObjectType>informationTextbox</informationObjectType>
+      <informationTextboxText></informationTextboxText>
+      <objectName>Textbox (5)</objectName>
+      <objectX>875</objectX>
+      <objectY>1364</objectY>
+      <objectRequired>False</objectRequired>
+      <objectPriority>9</objectPriority>
+      <objectFontSize>11</objectFontSize>
+      <objectHeight>30</objectHeight>
+      <objectWidth>180</objectWidth>
+   </informationObject>
+   <informationObject>
+      <informationObjectType>informationTextbox</informationObjectType>
+      <informationTextboxText></informationTextboxText>
+      <objectName>Textbox (3)</objectName>
+      <objectX>875</objectX>
+      <objectY>160</objectY>
+      <objectRequired>False</objectRequired>
+      <objectPriority>10</objectPriority>
+      <objectFontSize>10</objectFontSize>
+      <objectHeight>30</objectHeight>
+      <objectWidth>180</objectWidth>
+   </informationObject>
+   <informationObject>
+      <informationObjectType>informationTextbox</informationObjectType>
+      <informationTextboxText></informationTextboxText>
+      <objectName>Textbox (2)</objectName>
+      <objectX>330</objectX>
+      <objectY>1364</objectY>
+      <objectRequired>False</objectRequired>
+      <objectPriority>11</objectPriority>
+      <objectFontSize>11</objectFontSize>
+      <objectHeight>30</objectHeight>
+      <objectWidth>180</objectWidth>
+   </informationObject>
+   <informationObject>
+      <informationObjectType>informationCheckbox</informationObjectType>
+      <informationCheckboxStatus>False</informationCheckboxStatus>
+      <objectName>Checkbox</objectName>
+      <objectX>330</objectX>
+      <objectY>255</objectY>
+      <objectRequired>False</objectRequired>
+      <objectPriority>6</objectPriority>
+      <objectScale>3</objectScale>
+   </informationObject>
+   <informationObject>
+      <informationObjectType>informationCheckbox</informationObjectType>
+      <informationCheckboxStatus>False</informationCheckboxStatus>
+      <objectName>Checkbox (1)</objectName>
+      <objectX>330</objectX>
+      <objectY>778</objectY>
+      <objectRequired>False</objectRequired>
+      <objectPriority>7</objectPriority>
+      <objectScale>3</objectScale>
+   </informationObject>
+   <informationObject>
+      <informationObjectType>informationCheckbox</informationObjectType>
+      <informationCheckboxStatus>False</informationCheckboxStatus>
+      <objectName>Checkbox (2)</objectName>
+      <objectX>875</objectX>
+      <objectY>1395</objectY>
+      <objectRequired>False</objectRequired>
+      <objectPriority>8</objectPriority>
+      <objectScale>3</objectScale>
+   </informationObject>
+</jobTicket>

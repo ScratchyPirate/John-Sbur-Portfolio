@@ -1,0 +1,12 @@
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\JobTicketEngine\bin\Debug\net6.0\JobTicketEngine.deps.json
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\JobTicketEngine\bin\Debug\net6.0\JobTicketEngine.dll
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\JobTicketEngine\bin\Debug\net6.0\ref\JobTicketEngine.dll
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\JobTicketEngine\bin\Debug\net6.0\JobTicketEngine.pdb
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\JobTicketEngine\obj\Debug\net6.0\JobTicketEngine.csproj.AssemblyReference.cache
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\JobTicketEngine\obj\Debug\net6.0\JobTicketEngine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\JobTicketEngine\obj\Debug\net6.0\JobTicketEngine.AssemblyInfoInputs.cache
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\JobTicketEngine\obj\Debug\net6.0\JobTicketEngine.AssemblyInfo.cs
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\JobTicketEngine\obj\Debug\net6.0\JobTicketEngine.csproj.CoreCompileInputs.cache
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\JobTicketEngine\obj\Debug\net6.0\JobTicketEngine.dll
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\JobTicketEngine\obj\Debug\net6.0\ref\JobTicketEngine.dll
+C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\JobTicketEngine\obj\Debug\net6.0\JobTicketEngine.pdb

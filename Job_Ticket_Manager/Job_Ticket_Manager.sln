@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Job_Ticket_Manager", "Job_Ticket_Manager\Job_Ticket_Manager.csproj", "{55ECB820-ECD3-45EA-9DF9-55D40A9B68C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobTicketEngine", "JobTicketEngine\JobTicketEngine.csproj", "{09173675-2EAE-45FA-AC12-1744D37D14D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55ECB820-ECD3-45EA-9DF9-55D40A9B68C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55ECB820-ECD3-45EA-9DF9-55D40A9B68C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55ECB820-ECD3-45EA-9DF9-55D40A9B68C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55ECB820-ECD3-45EA-9DF9-55D40A9B68C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09173675-2EAE-45FA-AC12-1744D37D14D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09173675-2EAE-45FA-AC12-1744D37D14D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09173675-2EAE-45FA-AC12-1744D37D14D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09173675-2EAE-45FA-AC12-1744D37D14D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9094E8A-05FC-4BF5-90AE-D0AE9BF29DCB}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<template>
+   <templateName>test2.xml</templateName>
+   <templateDocumentPath>C:\Users\john_\Desktop\I-5 Computers Programming Projects\Job Ticket Manager\Job_Ticket_Manager\TestingDatabase\To do.docx</templateDocumentPath>
+   <informationObject>
+      <informationObjectType>informationStaticObject</informationObjectType>
+      <objectName>Customer First Name</objectName>
+      <objectX>50</objectX>
+      <objectY>100</objectY>
+      <objectFontSize>11</objectFontSize>
+   </informationObject>
+   <informationObject>
+      <informationObjectType>informationStaticObject</informationObjectType>
+      <objectName>Customer Last Name</objectName>
+      <objectX>600</objectX>
+      <objectY>100</objectY>
+      <objectFontSize>11</objectFontSize>
+   </informationObject>
+   <informationObject>
+      <informationObjectType>informationTextbox</informationObjectType>
+      <objectName>address</objectName>
+      <objectX>0</objectX>
+      <objectY>0</objectY>
+      <objectRequired>False</objectRequired>
+      <objectPriority>0</objectPriority>
+      <objectFontSize>11</objectFontSize>
+      <objectHeight>100</objectHeight>
+      <objectWidth>100</objectWidth>
+   </informationObject>
+   <informationObject>
+      <informationObjectType>informationTextbox</informationObjectType>
+      <objectName>phone number</objectName>
+      <objectX>0</objectX>
+      <objectY>500</objectY>
+      <objectRequired>False</objectRequired>
+      <objectPriority>2</objectPriority>
+      <objectFontSize>11</objectFontSize>
+      <objectHeight>200</objectHeight>
+      <objectWidth>100</objectWidth>
+   </informationObject>
+   <informationObject>
+      <informationObjectType>informationCheckbox</informationObjectType>
+      <objectName>can text?</objectName>
+      <objectX>0</objectX>
+      <objectY>200</objectY>
+      <objectRequired>True</objectRequired>
+      <objectPriority>1</objectPriority>
+      <objectScale>2</objectScale>
+   </informationObject>
+</template>
