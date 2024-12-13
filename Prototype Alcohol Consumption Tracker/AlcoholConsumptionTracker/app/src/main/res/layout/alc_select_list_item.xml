@@ -1,0 +1,175 @@
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="false">
+
+
+    <Button
+        android:id="@+id/alcSelectItemSelectButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:visibility="invisible"
+        tools:visibility="invisible"
+        android:clickable="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_blind_dark_blue"
+        android:clickable="false"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_blind_dark_blue"
+            android:clickable="false"
+            android:focusable="false"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/alcSelectListSpacer1"
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"
+                android:clickable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/defaultText"
+                android:visibility="invisible" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false">
+
+                <ImageView
+                    android:id="@+id/alcSelectTemplateBaseImage"
+                    android:layout_width="310dp"
+                    android:layout_height="100dp"
+                    android:clickable="false"
+                    android:scaleType="fitXY"
+                    android:scaleY="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/alcohol_select_blank_noselecticon" />
+
+                <RadioButton
+                    android:id="@+id/alcSelectListViewRadioButton"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:foregroundGravity="center_vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="88dp"
+                    android:layout_height="81dp"
+                    android:layout_marginStart="4dp"
+                    android:clickable="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/alcSelectTemplateBaseImage"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/alcohol_select_button_with_image" />
+
+                <ImageView
+                    android:id="@+id/alcSelectTemplateImage"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clickable="false"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                    app:layout_constraintStart_toStartOf="@+id/imageView2"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2"
+                    app:srcCompat="@mipmap/ic_default_drink_image" />
+
+                <TextView
+                    android:id="@+id/alcSelectTemplateName"
+                    android:layout_width="189dp"
+                    android:layout_height="29dp"
+                    android:layout_marginStart="110dp"
+                    android:layout_marginTop="8dp"
+                    android:clickable="false"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="1"
+                    android:textAlignment="gravity"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/alcSelectTemplateType"
+                    android:layout_width="74dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="7dp"
+                    android:clickable="false"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/alcSelectTemplateName" />
+
+                <TextView
+                    android:id="@+id/alcSelectTemplateServings"
+                    android:layout_width="44dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:clickable="false"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/alcSelectTemplateType"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/alcSelectTemplatePrice"
+                    android:layout_width="50dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="78dp"
+                    android:layout_marginTop="6dp"
+                    android:clickable="false"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="1"
+                    app:layout_constraintStart_toEndOf="@+id/alcSelectTemplateType"
+                    app:layout_constraintTop_toBottomOf="@+id/alcSelectTemplateName" />
+
+                <TextView
+                    android:id="@+id/alcSelectTemplateCalories"
+                    android:layout_width="49dp"
+                    android:layout_height="23dp"
+                    android:layout_marginStart="78dp"
+                    android:layout_marginTop="4dp"
+                    android:clickable="false"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="1"
+                    app:layout_constraintStart_toEndOf="@+id/alcSelectTemplateServings"
+                    app:layout_constraintTop_toBottomOf="@+id/alcSelectTemplatePrice" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/alcSelectListSpacer2"
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"
+                android:clickable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/defaultText"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

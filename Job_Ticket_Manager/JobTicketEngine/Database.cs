@@ -16,13 +16,13 @@ namespace JobTicketEngine
         /// <summary>
         ///  Path to database on computer.
         /// </summary>
-        private string databaseName;
+        protected string databaseName;
 
         public Database()
         {
             this.databaseName = AppDomain.CurrentDomain.BaseDirectory;
         }
-        public string DatabaseName
+        public virtual string DatabaseName
         {
             get { return databaseName; }
             set { databaseName = value; }

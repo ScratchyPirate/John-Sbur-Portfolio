@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.alcoholconsumptiontracker.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_logging"
+        android:name="com.example.alcoholconsumptiontracker.ui.dashboard.DashboardFragment"
+        android:label="Drink Logging"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/nav_reporting"
+        android:name="com.example.alcoholconsumptiontracker.ui.notifications.NotificationsFragment"
+        android:label="Report"
+        tools:layout="@layout/fragment_notifications">
+
+        <action
+            android:id="@+id/action_nav_reporting_to_daily_view"
+            app:destination="@id/daily_View" />
+
+        <action
+            android:id="@+id/action_nav_reporting_to_weekly_View"
+            app:destination="@id/weekly_View" />
+
+        <action
+            android:id="@+id/action_nav_reporting_to_monthly_View"
+            app:destination="@id/monthly_View" />
+    </fragment>
+    <fragment
+        android:id="@+id/daily_View"
+        android:name="com.example.alcoholconsumptiontracker.Daily_View"
+        android:label="fragment_daily__view"
+        tools:layout="@layout/fragment_daily__view" >
+
+        <action
+            android:id="@+id/action_daily_View_to_nav_reporting"
+            app:destination="@id/nav_reporting" />
+    </fragment>
+    <fragment
+        android:id="@+id/weekly_View"
+        android:name="com.example.alcoholconsumptiontracker.Weekly_View"
+        android:label="fragment_weekly__view"
+        tools:layout="@layout/fragment_weekly__view" >
+        <action
+            android:id="@+id/action_weekly_View_to_nav_reporting"
+            app:destination="@id/nav_reporting" />
+    </fragment>
+    <fragment
+        android:id="@+id/monthly_View"
+        android:name="com.example.alcoholconsumptiontracker.Monthly_View"
+        android:label="fragment_monthly__view"
+        tools:layout="@layout/fragment_monthly__view" />
+    <fragment
+        android:id="@+id/personal_Info"
+        android:name="com.example.alcoholconsumptiontracker.Personal_Info"
+        android:label="fragment_personal__info"
+        tools:layout="@layout/fragment_personal__info" />
+    <fragment
+        android:id="@+id/personal_Goals"
+        android:name="com.example.alcoholconsumptiontracker.Personal_Goals"
+        android:label="fragment_personal__goals"
+        tools:layout="@layout/fragment_personal__goals" />
+    <fragment
+        android:id="@+id/alc_Create"
+        android:name="com.example.alcoholconsumptiontracker.Alc_Create"
+        android:label="fragment_alc__create"
+        tools:layout="@layout/fragment_alc__create" />
+    <fragment
+        android:id="@+id/alc_Edit"
+        android:name="com.example.alcoholconsumptiontracker.Alc_Edit"
+        android:label="fragment_alc__edit"
+        tools:layout="@layout/fragment_alc__create_edit" />
+    <fragment
+        android:id="@+id/alc_Select"
+        android:name="com.example.alcoholconsumptiontracker.Alc_Select"
+        android:label="fragment_alc__select"
+        tools:layout="@layout/fragment_alc__select" />
+    <fragment
+        android:id="@+id/initialPersonalInformation"
+        android:name="com.example.alcoholconsumptiontracker.InitialPersonalInformation"
+        android:label="fragment_initial_personal_information"
+        tools:layout="@layout/fragment_initial_personal_information" />
+</navigation>

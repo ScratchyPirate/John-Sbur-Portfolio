@@ -54,6 +54,89 @@ namespace Job_Ticket_Manager
     }
 
     /// <summary>
+    ///  Class designed to contain messages displayed when a security issue is involved.
+    /// </summary>
+    public static class SecurityMessages
+    {
+        // Security Message Titles
+        public static string WarningMessageTitle
+        {
+            get { return "Warning"; }
+        }
+
+        // Security Messages
+        public static string DefaultActiveDatabaseWarning
+        {
+            get { return "The database you are currently in is the default database. It is recommended that you create your own database before you get started. Any person on this system will be able to access templates and tickets created here."; }
+        }
+        public static string NewActiveDatabaseMessage
+        {
+            get { return "You've entered an uninitialized database. As such, you are now the new administrator of this database. Create a username and password for it for your next login."; }
+        }
+        public static string LoginMessage(string location)
+        {
+            return "Logging into database {" + location + "}. Enter your username and password on this database.";
+        }
+        public static string UserCreatedSuccessfully
+        {
+            get { return "New user created successfully. Try logging in with your new username and password."; }
+        }
+        public static string UserPromotedSuccessfully(string nameOfUser)
+        {
+            return "Successfully promoted user {" + nameOfUser + "}.";
+        }
+
+    }
+
+    /// <summary>
+    ///  Handles constants related to security
+    /// </summary>
+    public static class SecurityConstants
+    {
+        // User constants
+        public static int PasswordMinimumLength
+        {
+            get { return 5; }
+        }
+        public static int PasswordMaximumLength
+        {
+            get { return 20; }
+        }
+        public static int PasswordAndSaltLength
+        {
+            get { return PasswordMaximumLength + 10; }
+        }
+
+        // Privilege names
+        public static string GuestUser
+        {
+            get { return "Guest"; }
+        }
+        public static string AdminUser
+        {
+            get { return "Admin"; }
+        }
+
+        // Default username
+        public static string DefaultUserName
+        {
+            get { return "DefaultUser"; }
+        }
+     
+    }
+    
+    /// <summary>
+    ///  Holds constants related to the main window.
+    /// </summary>
+    public static class MainWindowConstants
+    {
+        public static string MainWindowTitle
+        {
+            get { return "JCS Job Ticket Manager"; }
+        }
+    }
+
+    /// <summary>
     ///  Class meant to contain constants available to all parts of the program with drawing tools
     ///  such as pens and fonts for easy access.
     /// </summary>
@@ -141,6 +224,18 @@ namespace Job_Ticket_Manager
         public static string ApplicationErrorTitle
         {
             get { return "Application Error"; }
+        }
+        public static string CreateUserErrorTitle
+        {
+            get { return "Create User Error"; }
+        }
+        public static string LoginErrorTitle
+        {
+            get { return "Login Error"; }
+        }
+        public static string PromoteUserErrorTitle
+        {
+            get { return "Promote User Error"; }
         }
 
 
@@ -282,6 +377,56 @@ namespace Job_Ticket_Manager
         public static string ApplicationErrorSystemDataNotRead
         {
             get { return "FATAL ERROR: System data read error."; }
+        }
+
+        // Create User Error Messages, Promote User Error Messages, AND Login Error Messages
+        public static string UsernameMissing
+        {
+            get { return "Username entry is missing."; }
+        }
+        public static string UsernameTaken
+        {
+            get { return "Username entered is already in use."; }
+        }
+        public static string PasswordMissing
+        {
+            get { return "Missing password entry."; }
+        }
+        public static string PasswordMinimumLength
+        {
+            get { return "Password entered is below minimum length. Minimum length is: " + SecurityConstants.PasswordMinimumLength.ToString() + "."; }
+        }
+        public static string PasswordMaximumLength
+        {
+            get { return "Password entered is above maximum length. Maximum length is: " + SecurityConstants.PasswordMaximumLength.ToString() + "."; }
+        }
+        public static string PasswordsDoNotMatch
+        {
+            get { return "The passwords you entered do not match. Re-enter the second entry so that they match."; }
+        }
+        public static string UsernameAlreadyExists
+        {
+            get { return "Username entered already exists in active database."; }
+        }
+        public static string UserDatabaseFileError
+        {
+            get { return "There was an error encountered while storing the user data on the user database file."; }
+        }
+        public static string LoginFailedIncorrectPassword
+        {
+            get { return "Password entered was incorrect."; }
+        }
+        public static string LoginFailedUsernameNotFound
+        {
+            get { return "Username not in database."; }
+        }
+        public static string LoginFailedUserDatabaseMissing
+        {
+            get { return "Error: User database not found. Please restart application."; }
+        }
+        public static string LoginFailedFileError
+        {
+            get { return "Error: Reading/Writing to user database encountered an error."; }
         }
     }
 

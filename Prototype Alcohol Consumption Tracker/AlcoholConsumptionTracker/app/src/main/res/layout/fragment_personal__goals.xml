@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:exported="true"
+    android:id="@+id/personal_Goals"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Personal_Goals"
+    android:background="#658DF0">
+
+
+<!--        <Button-->
+<!--            android:id="@+id/page2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="This Is the Second Page"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintRight_toRightOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="772dp">
+
+                <ImageView
+                    android:id="@+id/personal_goals_titlebarid"
+                    android:layout_width="370dp"
+                    android:layout_height="89dp"
+                    android:src="@drawable/personalgoalstitle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.487"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.051" />
+
+
+                <ImageView
+                    android:id="@+id/personal_goals_dailyid"
+                    android:layout_width="374dp"
+                    android:layout_height="219dp"
+                    android:src="@drawable/personalgoalsdailyempty"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.487"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.192" />
+
+                <ImageView
+                    android:id="@+id/personal_goals_weeklyid"
+                    android:layout_width="374dp"
+                    android:layout_height="219dp"
+                    android:src="@drawable/personalgoalsweeklyempty"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.487"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.520" />
+
+                <ImageView
+                    android:id="@+id/personal_goals_monthlyid"
+                    android:layout_width="374dp"
+                    android:layout_height="219dp"
+                    android:src="@drawable/personalgoalsmonthlyempty"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.487"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.870" />
+
+                <EditText
+                    android:id="@+id/goalpricedailyid"
+                    android:layout_width="111dp"
+                    android:layout_height="48dp"
+                    android:hint="$"
+                    android:textColor="#96B1FF"
+                    android:textColorHint="#96B1FF"
+                    android:textCursorDrawable="@null"
+                    app:backgroundTint="#96B1FF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.123"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.269" />
+
+                <EditText
+                    android:id="@+id/goalpriceweeklyid"
+                    android:layout_width="111dp"
+                    android:layout_height="48dp"
+                    android:hint="$"
+                    android:textColor="#96B1FF"
+                    android:textColorHint="#96B1FF"
+                    android:textCursorDrawable="@null"
+                    app:backgroundTint="#96B1FF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.123"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.525" />
+
+                <EditText
+                    android:id="@+id/goalpricemonthlyid"
+                    android:layout_width="111dp"
+                    android:layout_height="48dp"
+                    android:hint="$"
+                    android:textColor="#96B1FF"
+                    android:textColorHint="#96B1FF"
+                    android:textCursorDrawable="@null"
+                    app:backgroundTint="#96B1FF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.123"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.79" />
+
+                <EditText
+                    android:id="@+id/goalservingsdailyid"
+                    android:layout_width="111dp"
+                    android:layout_height="48dp"
+                    android:textColor="#96B1FF"
+                    android:textColorHint="#96B1FF"
+                    android:textCursorDrawable="@null"
+                    app:backgroundTint="#96B1FF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.52"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.269" />
+
+                <EditText
+                    android:id="@+id/goalservingsweeklyid"
+                    android:layout_width="111dp"
+                    android:layout_height="48dp"
+                    android:textColor="#96B1FF"
+                    android:textColorHint="#96B1FF"
+                    android:textCursorDrawable="@null"
+                    app:backgroundTint="#96B1FF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.52"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.525" />
+
+                <EditText
+                    android:id="@+id/goalservingsmonthlyid"
+                    android:layout_width="111dp"
+                    android:layout_height="48dp"
+                    android:textColor="#96B1FF"
+                    android:textColorHint="#96B1FF"
+                    android:textCursorDrawable="@null"
+                    app:backgroundTint="#96B1FF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.52"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.79" />
+
+                <EditText
+                    android:id="@+id/goalcaloriesdailyid"
+                    android:layout_width="111dp"
+                    android:layout_height="48dp"
+                    android:textColor="#96B1FF"
+                    android:textColorHint="#96B1FF"
+                    android:textCursorDrawable="@null"
+                    app:backgroundTint="#96B1FF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.92"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.269" />
+
+                <EditText
+                    android:id="@+id/goalinfodailyid"
+                    android:layout_width="320dp"
+                    android:layout_height="40dp"
+                    android:hint="Any written goals?"
+                    android:textColor="#96B1FF"
+                    android:textColorHint="#96B1FF"
+                    android:textCursorDrawable="@null"
+                    app:backgroundTint="#96B1FF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.493"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.343" />
+
+                <EditText
+                    android:id="@+id/goalinfoweeklyid"
+                    android:layout_width="320dp"
+                    android:layout_height="40dp"
+                    android:hint="Any written goals?"
+                    android:textColor="#96B1FF"
+                    android:textColorHint="#96B1FF"
+                    android:textCursorDrawable="@null"
+                    app:backgroundTint="#96B1FF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.494"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.593" />
+
+                <EditText
+                    android:id="@+id/goalinfomonthlyid"
+                    android:layout_width="320dp"
+                    android:layout_height="40dp"
+                    android:hint="Any written goals?"
+                    android:textColor="#96B1FF"
+                    android:textColorHint="#96B1FF"
+                    android:textCursorDrawable="@null"
+                    app:backgroundTint="#96B1FF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.494"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.854" />
+
+                <EditText
+                    android:id="@+id/goalcaloriesweeklyid"
+                    android:layout_width="111dp"
+                    android:layout_height="48dp"
+                    android:textColor="#96B1FF"
+                    android:textColorHint="#96B1FF"
+                    android:textCursorDrawable="@null"
+                    app:backgroundTint="#96B1FF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.92"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.525" />
+
+                <EditText
+                    android:id="@+id/goalcaloriesmonthlyid"
+                    android:layout_width="111dp"
+                    android:layout_height="48dp"
+                    android:textColor="#96B1FF"
+                    android:textColorHint="#96B1FF"
+                    android:textCursorDrawable="@null"
+                    app:backgroundTint="#96B1FF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.92"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.79" />
+
+
+                <ImageButton
+                    android:id="@+id/geariconPGid"
+                    android:layout_width="101dp"
+                    android:layout_height="115dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/geariconnotclicked"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.77"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.01" />
+
+                <ImageButton
+                    android:id="@+id/finishbuttonPGid"
+                    android:layout_width="210dp"
+                    android:layout_height="108dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/finishbutton"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>

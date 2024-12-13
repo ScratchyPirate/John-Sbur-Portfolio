@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/alc_Programming"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_blind_dark_blue"
+    tools:context=".Alc_Programming">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_blind_dark_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/color_blind_light_blue"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="10dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="-5dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="-5dp"
+        android:background="@drawable/rounded_corner_square_ver_1"
+        app:layout_constraintEnd_toEndOf="@+id/alc_programming_selected_template"
+        app:layout_constraintStart_toStartOf="@+id/alc_programming_selected_template"
+        app:layout_constraintTop_toTopOf="@+id/alc_programming_selected_template" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="-5dp"
+        android:layout_marginEnd="-5dp"
+        android:layout_marginBottom="-10dp"
+        android:background="@drawable/rounded_corner_square_ver_1"
+        app:layout_constraintBottom_toBottomOf="@+id/alc_programming_selected_template"
+        app:layout_constraintEnd_toEndOf="@+id/alc_programming_selected_template"
+        app:layout_constraintStart_toEndOf="@+id/alc_programming_selected_template"
+        app:layout_constraintStart_toStartOf="@+id/alc_programming_selected_template" />
+
+
+    <ListView
+        android:id="@+id/alc_programming_selected_template"
+        android:layout_width="400dp"
+        android:layout_height="425dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/color_blind_dark_blue"
+        android:choiceMode="singleChoice"
+        android:divider="@color/black"
+        android:dividerHeight="2dp"
+        android:overScrollMode="never"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/alcProgrammingCreateDrink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/alcProgrammingBackButton"
+        android:layout_width="95dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:scaleType="fitXY"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:src="@mipmap/arrow_button_not_clicked"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/alcProgrammingCreateDrink"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/alcProgrammingCreateDrink"
+        android:layout_width="208dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:scaleType="centerInside"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:src="@mipmap/alc_programming_create_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/alcProgrammingBackButton" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="266dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/title_bar" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Drink Templates"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+    <ImageView
+        android:id="@+id/alcProgrammingHelpSquare"
+        android:layout_width="171dp"
+        android:layout_height="164dp"
+        android:layout_marginBottom="150dp"
+        android:src="@mipmap/generic_grey_square"
+        app:layout_constraintBottom_toTopOf="@+id/alcProgrammingCreateDrink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/alcProgrammingHelpTextbox"
+        android:layout_width="138dp"
+        android:layout_height="136dp"
+        android:text="Create template of drinks you plan on drinking. Then, use them to log your drinks for the day. Modify or delete them later at any time."
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/alcProgrammingHelpSquare"
+        app:layout_constraintEnd_toEndOf="@+id/alcProgrammingHelpSquare"
+        app:layout_constraintStart_toStartOf="@+id/alcProgrammingHelpSquare"
+        app:layout_constraintTop_toTopOf="@+id/alcProgrammingHelpSquare" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

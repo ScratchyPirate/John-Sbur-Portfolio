@@ -21,9 +21,9 @@ namespace Job_Ticket_Manager
         static void Main()
         {
             // Initialization step
+            ApplicationConfiguration.Initialize();
 
             // Begin running the main window
-            ApplicationConfiguration.Initialize();
             Application.Run(new MainWindow());
 
         }

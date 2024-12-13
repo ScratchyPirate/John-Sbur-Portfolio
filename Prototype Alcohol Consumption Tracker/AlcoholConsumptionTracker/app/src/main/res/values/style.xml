@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="alcSelectButton">
+        <item name="colorPrimary">@color/color_blind_light_blue</item>
+        <item name="colorPrimaryVariant">@color/color_blind_dark_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+</resources>

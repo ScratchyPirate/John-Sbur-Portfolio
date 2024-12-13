@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/view_Landing"
+    tools:context=".ui.notifications.NotificationsFragment">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/match_background"
+        android:paddingTop="25dp"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="115dp"
+            android:layout_marginTop="20dp"
+            android:text="Select View"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <ImageView
+            android:id="@+id/graphs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="-22dp"
+            android:layout_marginTop="-65dp"
+            android:src="@drawable/graphstitlebar" />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/button_to_monthly_view"
+        android:layout_marginStart="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_to_weekly_view"
+        tools:ignore="MissingConstraints"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="-40dp"
+        android:src="@drawable/gotomonthlyview"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:contentDescription="Button Description"/>
+
+    <ImageButton
+        android:id="@+id/button_to_daily_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="240dp"
+        android:src="@drawable/gotodailyview"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:contentDescription="Button Description" />
+
+    <ImageButton
+        android:id="@+id/button_to_weekly_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_to_daily_view"
+        tools:ignore="MissingConstraints"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/gotoweeklyview"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:contentDescription="Button Description"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

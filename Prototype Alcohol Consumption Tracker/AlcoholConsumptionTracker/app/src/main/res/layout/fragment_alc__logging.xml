@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/alc_Logging"
+    tools:context=".Alc_Logging">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/alcEditCreateDropdownItem"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="-150dp"
+            android:layout_marginBottom="-150dp"
+            android:background="@color/color_blind_dark_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="135dp"
+            android:layout_height="138dp"
+            android:layout_marginBottom="20dp"
+            android:src="@mipmap/alcohol_select_button_with_image"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView" />
+
+        <ImageView
+            android:id="@+id/drinkLoggingImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView5"
+            app:srcCompat="@mipmap/ic_default_drink_image" />
+
+        <ImageButton
+            android:id="@+id/alcLoggingBackButton"
+            android:layout_width="95dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:scaleType="fitXY"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:src="@mipmap/arrow_button_not_clicked"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/alcLoggingFinishLoggingButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/alcEditCreateDropdownItem"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="270dp"
+            android:layout_height="180dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/alc_logging_drink_info"
+            app:layout_constraintBottom_toTopOf="@+id/imageView12"
+            app:layout_constraintEnd_toStartOf="@+id/imageView5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/alcLoggingImage"
+            android:layout_width="142dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="4dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/alc_logging_blank_text"
+            app:layout_constraintStart_toStartOf="@+id/alcLoggingImage4"
+            app:layout_constraintTop_toBottomOf="@+id/alcLoggingImage2" />
+
+        <ImageView
+            android:id="@+id/alcLoggingImage4"
+            android:layout_width="142dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="3dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/alc_logging_blank_text"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/alcLoggingImage" />
+
+        <ImageView
+            android:id="@+id/alcLoggingImage5"
+            android:layout_width="142dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="3dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/alc_logging_blank_text"
+            app:layout_constraintStart_toStartOf="@+id/alcLoggingImage4"
+            app:layout_constraintTop_toBottomOf="@+id/alcLoggingImage4" />
+
+        <ImageView
+            android:id="@+id/alcLoggingImage3"
+            android:layout_width="142dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="11dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/alc_logging_blank_text"
+            app:layout_constraintStart_toStartOf="@+id/alcLoggingImage4"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+        <ImageView
+            android:id="@+id/alcLoggingImage2"
+            android:layout_width="142dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/alc_logging_blank_text"
+            app:layout_constraintStart_toStartOf="@+id/alcLoggingImage4"
+            app:layout_constraintTop_toBottomOf="@+id/alcLoggingImage3" />
+
+        <TextView
+            android:id="@+id/alcLoggingName"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/alcLoggingImage3"
+            app:layout_constraintEnd_toEndOf="@+id/alcLoggingImage3"
+            app:layout_constraintStart_toStartOf="@+id/alcLoggingImage3"
+            app:layout_constraintTop_toTopOf="@+id/alcLoggingImage3" />
+
+        <TextView
+            android:id="@+id/alcLoggingType"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/alcLoggingImage2"
+            app:layout_constraintEnd_toEndOf="@+id/alcLoggingImage2"
+            app:layout_constraintStart_toStartOf="@+id/alcLoggingImage2"
+            app:layout_constraintTop_toTopOf="@+id/alcLoggingImage2" />
+
+        <TextView
+            android:id="@+id/alcLoggingServings"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/alcLoggingImage"
+            app:layout_constraintEnd_toEndOf="@+id/alcLoggingImage"
+            app:layout_constraintStart_toStartOf="@+id/alcLoggingImage"
+            app:layout_constraintTop_toTopOf="@+id/alcLoggingImage" />
+
+        <TextView
+            android:id="@+id/alcLoggingCalories"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/alcLoggingImage4"
+            app:layout_constraintEnd_toEndOf="@+id/alcLoggingImage4"
+            app:layout_constraintStart_toStartOf="@+id/alcLoggingImage4"
+            app:layout_constraintTop_toTopOf="@+id/alcLoggingImage4" />
+
+        <TextView
+            android:id="@+id/alcLoggingPrice"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/alcLoggingImage5"
+            app:layout_constraintEnd_toEndOf="@+id/alcLoggingImage5"
+            app:layout_constraintStart_toStartOf="@+id/alcLoggingImage5"
+            app:layout_constraintTop_toTopOf="@+id/alcLoggingImage5" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="266dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/title_bar" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Drink Log"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+            app:layout_constraintEnd_toEndOf="@+id/imageView11"
+            app:layout_constraintStart_toStartOf="@+id/imageView11"
+            app:layout_constraintTop_toTopOf="@+id/imageView11" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="376dp"
+            android:layout_height="140dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/alc_logging_occasion_textbox"
+            app:layout_constraintBottom_toTopOf="@+id/alcLoggingAddOneDrink"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.485"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/drinkLoggingOccassionInput"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="12dp"
+            android:ems="10"
+            android:gravity="start|left"
+            android:hint="Whats the occasion? (Optional)"
+            android:inputType="text"
+            android:text="Name"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView12"
+            app:layout_constraintEnd_toEndOf="@+id/imageView12"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView12"
+            app:layout_constraintTop_toTopOf="@+id/imageView12"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="171dp"
+            android:layout_height="91dp"
+            android:layout_marginBottom="40dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/alc_logging_time_textbox"
+            app:layout_constraintBottom_toBottomOf="@+id/alcLoggingAddOneDrink"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/alcLoggingAddOneDrink" />
+
+        <ImageButton
+            android:id="@+id/alcLoggingAddOneDrink"
+            android:layout_width="173dp"
+            android:layout_height="181dp"
+            android:layout_marginBottom="30dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:scaleType="centerInside"
+            android:src="@mipmap/alc_logging_tap_to_add_serving"
+            app:layout_constraintBottom_toTopOf="@+id/alcLoggingBackButton"
+            app:layout_constraintEnd_toStartOf="@+id/imageView13"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/alcLoggingDrinkTime"
+            android:layout_width="101dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="7dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:gravity="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+            app:layout_constraintEnd_toEndOf="@+id/imageView13"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView13"
+            app:layout_constraintTop_toTopOf="@+id/imageView13"
+            app:layout_constraintVertical_bias="0.875" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:text="Time of Drink"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/alcLoggingDrinkTime"
+            app:layout_constraintEnd_toEndOf="@+id/imageView13"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView13"
+            app:layout_constraintTop_toTopOf="@+id/imageView13"
+            app:layout_constraintVertical_bias="0.44" />
+
+        <ImageButton
+            android:id="@+id/alcLoggingFinishLoggingButton"
+            android:layout_width="208dp"
+            android:layout_height="74dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:scaleType="centerInside"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:src="@mipmap/alc_logging_finished_button"
+            app:layout_constraintBottom_toBottomOf="@+id/alcLoggingBackButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/alcLoggingBackButton" />
+
+        <Button
+            android:id="@+id/alcLoggingTimeSelectorButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0"
+            android:enabled="true"
+            android:text=""
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+            app:layout_constraintEnd_toEndOf="@+id/imageView13"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView13"
+            app:layout_constraintTop_toTopOf="@+id/imageView13" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

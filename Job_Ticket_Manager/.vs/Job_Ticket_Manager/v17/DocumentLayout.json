@@ -1,0 +1,165 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\John\\Desktop\\Programming\\I-5 Computers Programming Projects\\Job Ticket Manager\\John-Sbur-Portfolio\\Job_Ticket_Manager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{09173675-2EAE-45FA-AC12-1744D37D14D6}|JobTicketEngine\\JobTicketEngine.csproj|c:\\users\\john\\desktop\\programming\\i-5 computers programming projects\\job ticket manager\\john-sbur-portfolio\\job_ticket_manager\\jobticketengine\\cipher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09173675-2EAE-45FA-AC12-1744D37D14D6}|JobTicketEngine\\JobTicketEngine.csproj|solutionrelative:jobticketengine\\cipher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09173675-2EAE-45FA-AC12-1744D37D14D6}|JobTicketEngine\\JobTicketEngine.csproj|c:\\users\\john\\desktop\\programming\\i-5 computers programming projects\\job ticket manager\\john-sbur-portfolio\\job_ticket_manager\\jobticketengine\\jobticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09173675-2EAE-45FA-AC12-1744D37D14D6}|JobTicketEngine\\JobTicketEngine.csproj|solutionrelative:jobticketengine\\jobticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09173675-2EAE-45FA-AC12-1744D37D14D6}|JobTicketEngine\\JobTicketEngine.csproj|c:\\users\\john\\desktop\\programming\\i-5 computers programming projects\\job ticket manager\\john-sbur-portfolio\\job_ticket_manager\\jobticketengine\\tickettemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09173675-2EAE-45FA-AC12-1744D37D14D6}|JobTicketEngine\\JobTicketEngine.csproj|solutionrelative:jobticketengine\\tickettemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09173675-2EAE-45FA-AC12-1744D37D14D6}|JobTicketEngine\\JobTicketEngine.csproj|c:\\users\\john\\desktop\\programming\\i-5 computers programming projects\\job ticket manager\\john-sbur-portfolio\\job_ticket_manager\\jobticketengine\\informationtextbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09173675-2EAE-45FA-AC12-1744D37D14D6}|JobTicketEngine\\JobTicketEngine.csproj|solutionrelative:jobticketengine\\informationtextbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09173675-2EAE-45FA-AC12-1744D37D14D6}|JobTicketEngine\\JobTicketEngine.csproj|c:\\users\\john\\desktop\\programming\\i-5 computers programming projects\\job ticket manager\\john-sbur-portfolio\\job_ticket_manager\\jobticketengine\\informationcheckbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09173675-2EAE-45FA-AC12-1744D37D14D6}|JobTicketEngine\\JobTicketEngine.csproj|solutionrelative:jobticketengine\\informationcheckbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09173675-2EAE-45FA-AC12-1744D37D14D6}|JobTicketEngine\\JobTicketEngine.csproj|c:\\users\\john\\desktop\\programming\\i-5 computers programming projects\\job ticket manager\\john-sbur-portfolio\\job_ticket_manager\\jobticketengine\\informationobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09173675-2EAE-45FA-AC12-1744D37D14D6}|JobTicketEngine\\JobTicketEngine.csproj|solutionrelative:jobticketengine\\informationobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55ECB820-ECD3-45EA-9DF9-55D40A9B68C9}|Job_Ticket_Manager\\Job_Ticket_Manager.csproj|c:\\users\\john\\desktop\\programming\\i-5 computers programming projects\\job ticket manager\\john-sbur-portfolio\\job_ticket_manager\\job_ticket_manager\\mainwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55ECB820-ECD3-45EA-9DF9-55D40A9B68C9}|Job_Ticket_Manager\\Job_Ticket_Manager.csproj|solutionrelative:job_ticket_manager\\mainwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09173675-2EAE-45FA-AC12-1744D37D14D6}|JobTicketEngine\\JobTicketEngine.csproj|c:\\users\\john\\desktop\\programming\\i-5 computers programming projects\\job ticket manager\\john-sbur-portfolio\\job_ticket_manager\\jobticketengine\\activedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09173675-2EAE-45FA-AC12-1744D37D14D6}|JobTicketEngine\\JobTicketEngine.csproj|solutionrelative:jobticketengine\\activedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55ECB820-ECD3-45EA-9DF9-55D40A9B68C9}|Job_Ticket_Manager\\Job_Ticket_Manager.csproj|c:\\users\\john\\desktop\\programming\\i-5 computers programming projects\\job ticket manager\\john-sbur-portfolio\\job_ticket_manager\\job_ticket_manager\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55ECB820-ECD3-45EA-9DF9-55D40A9B68C9}|Job_Ticket_Manager\\Job_Ticket_Manager.csproj|solutionrelative:job_ticket_manager\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TicketTemplate.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Desktop\\Programming\\I-5 Computers Programming Projects\\Job Ticket Manager\\John-Sbur-Portfolio\\Job_Ticket_Manager\\JobTicketEngine\\TicketTemplate.cs",
+              "RelativeDocumentMoniker": "JobTicketEngine\\TicketTemplate.cs",
+              "ToolTip": "C:\\Users\\John\\Desktop\\Programming\\I-5 Computers Programming Projects\\Job Ticket Manager\\John-Sbur-Portfolio\\Job_Ticket_Manager\\JobTicketEngine\\TicketTemplate.cs",
+              "RelativeToolTip": "JobTicketEngine\\TicketTemplate.cs",
+              "ViewState": "AQIAAKgAAAAAAAAAAAAIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T23:08:15.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InformationTextbox.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Desktop\\Programming\\I-5 Computers Programming Projects\\Job Ticket Manager\\John-Sbur-Portfolio\\Job_Ticket_Manager\\JobTicketEngine\\InformationTextbox.cs",
+              "RelativeDocumentMoniker": "JobTicketEngine\\InformationTextbox.cs",
+              "ToolTip": "C:\\Users\\John\\Desktop\\Programming\\I-5 Computers Programming Projects\\Job Ticket Manager\\John-Sbur-Portfolio\\Job_Ticket_Manager\\JobTicketEngine\\InformationTextbox.cs",
+              "RelativeToolTip": "JobTicketEngine\\InformationTextbox.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T23:08:09.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "InformationObject.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Desktop\\Programming\\I-5 Computers Programming Projects\\Job Ticket Manager\\John-Sbur-Portfolio\\Job_Ticket_Manager\\JobTicketEngine\\InformationObject.cs",
+              "RelativeDocumentMoniker": "JobTicketEngine\\InformationObject.cs",
+              "ToolTip": "C:\\Users\\John\\Desktop\\Programming\\I-5 Computers Programming Projects\\Job Ticket Manager\\John-Sbur-Portfolio\\Job_Ticket_Manager\\JobTicketEngine\\InformationObject.cs",
+              "RelativeToolTip": "JobTicketEngine\\InformationObject.cs",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T23:07:59.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InformationCheckbox.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Desktop\\Programming\\I-5 Computers Programming Projects\\Job Ticket Manager\\John-Sbur-Portfolio\\Job_Ticket_Manager\\JobTicketEngine\\InformationCheckbox.cs",
+              "RelativeDocumentMoniker": "JobTicketEngine\\InformationCheckbox.cs",
+              "ToolTip": "C:\\Users\\John\\Desktop\\Programming\\I-5 Computers Programming Projects\\Job Ticket Manager\\John-Sbur-Portfolio\\Job_Ticket_Manager\\JobTicketEngine\\InformationCheckbox.cs",
+              "RelativeToolTip": "JobTicketEngine\\InformationCheckbox.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T23:07:58.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ActiveDatabase.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Desktop\\Programming\\I-5 Computers Programming Projects\\Job Ticket Manager\\John-Sbur-Portfolio\\Job_Ticket_Manager\\JobTicketEngine\\ActiveDatabase.cs",
+              "RelativeDocumentMoniker": "JobTicketEngine\\ActiveDatabase.cs",
+              "ToolTip": "C:\\Users\\John\\Desktop\\Programming\\I-5 Computers Programming Projects\\Job Ticket Manager\\John-Sbur-Portfolio\\Job_Ticket_Manager\\JobTicketEngine\\ActiveDatabase.cs",
+              "RelativeToolTip": "JobTicketEngine\\ActiveDatabase.cs",
+              "ViewState": "AQIAAAsBAAAAAAAAAAAgwCkBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T04:10:38.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JobTicket.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Desktop\\Programming\\I-5 Computers Programming Projects\\Job Ticket Manager\\John-Sbur-Portfolio\\Job_Ticket_Manager\\JobTicketEngine\\JobTicket.cs",
+              "RelativeDocumentMoniker": "JobTicketEngine\\JobTicket.cs",
+              "ToolTip": "C:\\Users\\John\\Desktop\\Programming\\I-5 Computers Programming Projects\\Job Ticket Manager\\John-Sbur-Portfolio\\Job_Ticket_Manager\\JobTicketEngine\\JobTicket.cs",
+              "RelativeToolTip": "JobTicketEngine\\JobTicket.cs",
+              "ViewState": "AQIAAI8AAAAAAAAAAAAswKcAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T04:10:38.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Constants.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Desktop\\Programming\\I-5 Computers Programming Projects\\Job Ticket Manager\\John-Sbur-Portfolio\\Job_Ticket_Manager\\Job_Ticket_Manager\\Constants.cs",
+              "RelativeDocumentMoniker": "Job_Ticket_Manager\\Constants.cs",
+              "ToolTip": "C:\\Users\\John\\Desktop\\Programming\\I-5 Computers Programming Projects\\Job Ticket Manager\\John-Sbur-Portfolio\\Job_Ticket_Manager\\Job_Ticket_Manager\\Constants.cs",
+              "RelativeToolTip": "Job_Ticket_Manager\\Constants.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T04:10:38.933Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Cipher.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Desktop\\Programming\\I-5 Computers Programming Projects\\Job Ticket Manager\\John-Sbur-Portfolio\\Job_Ticket_Manager\\JobTicketEngine\\Cipher.cs",
+              "RelativeDocumentMoniker": "JobTicketEngine\\Cipher.cs",
+              "ToolTip": "C:\\Users\\John\\Desktop\\Programming\\I-5 Computers Programming Projects\\Job Ticket Manager\\John-Sbur-Portfolio\\Job_Ticket_Manager\\JobTicketEngine\\Cipher.cs",
+              "RelativeToolTip": "JobTicketEngine\\Cipher.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAB8AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T04:10:38.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindow.cs",
+              "DocumentMoniker": "C:\\Users\\John\\Desktop\\Programming\\I-5 Computers Programming Projects\\Job Ticket Manager\\John-Sbur-Portfolio\\Job_Ticket_Manager\\Job_Ticket_Manager\\MainWindow.cs",
+              "RelativeDocumentMoniker": "Job_Ticket_Manager\\MainWindow.cs",
+              "ToolTip": "C:\\Users\\John\\Desktop\\Programming\\I-5 Computers Programming Projects\\Job Ticket Manager\\John-Sbur-Portfolio\\Job_Ticket_Manager\\Job_Ticket_Manager\\MainWindow.cs",
+              "RelativeToolTip": "Job_Ticket_Manager\\MainWindow.cs",
+              "ViewState": "AQIAAMQAAAAAAAAAAAAUwM4AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T04:10:38.938Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

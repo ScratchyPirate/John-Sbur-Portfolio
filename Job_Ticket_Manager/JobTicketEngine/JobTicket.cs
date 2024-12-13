@@ -332,15 +332,15 @@ namespace JobTicketEngine
 
             // JobTicket Document 
             targetSaveFile.WriteStartElement(JobTicketXMLNames.JobTicketDocumentPath);
-            targetSaveFile.WriteString(this.DocumentPath);
+            targetSaveFile.WriteString(Cipher.TranspositionEncrypt(this.DocumentPath));
             targetSaveFile.WriteEndElement();
 
             // JobTicket Customer First and Last name
             targetSaveFile.WriteStartElement(JobTicketXMLNames.JobTicketFirstName);
-            targetSaveFile.WriteString(this.CustomerFirstName);
+            targetSaveFile.WriteString(Cipher.TranspositionEncrypt(this.CustomerFirstName));
             targetSaveFile.WriteEndElement();
             targetSaveFile.WriteStartElement(JobTicketXMLNames.JobTicketLastName);
-            targetSaveFile.WriteString(this.CustomerLastName);
+            targetSaveFile.WriteString(Cipher.TranspositionEncrypt(this.CustomerLastName));
             targetSaveFile.WriteEndElement();
 
             // JobTicket Information Objects:
@@ -453,7 +453,7 @@ namespace JobTicketEngine
 
                 // Textbox Text
                 targetSaveFile.WriteStartElement(JobTicketXMLNames.InformationTextboxText);
-                targetSaveFile.WriteString(this.JobTextboxes[i].Text);
+                targetSaveFile.WriteString(Cipher.TranspositionEncrypt(this.JobTextboxes[i].Text));
                 targetSaveFile.WriteEndElement();
 
                 // Textbox name
@@ -513,7 +513,7 @@ namespace JobTicketEngine
 
                 // Checkbox status
                 targetSaveFile.WriteStartElement(JobTicketXMLNames.InformationCheckboxStatus);
-                targetSaveFile.WriteString(this.JobCheckboxes[i].Status.ToString());
+                targetSaveFile.WriteString(Cipher.TranspositionEncrypt(this.JobCheckboxes[i].Status.ToString()));
                 targetSaveFile.WriteEndElement();
 
                 // Checkbox name
@@ -596,11 +596,11 @@ namespace JobTicketEngine
 
             // Get next element. Set the attribute to this object's document path
             targetReadFile.ReadToFollowing(JobTicketXMLNames.JobTicketDocumentPath);
-            this.DocumentPath = targetReadFile.ReadElementContentAsString();
+            this.DocumentPath = Cipher.TranspositionDecrypt(targetReadFile.ReadElementContentAsString());
 
             // Get next two elements. Set the first and last name of the ticket to being the elements read in
-            this.CustomerFirstName = targetReadFile.ReadElementContentAsString();
-            this.CustomerLastName = targetReadFile.ReadElementContentAsString();
+            this.CustomerFirstName = Cipher.TranspositionDecrypt(targetReadFile.ReadElementContentAsString());
+            this.CustomerLastName = Cipher.TranspositionDecrypt(targetReadFile.ReadElementContentAsString());
 
             // Helper variables for storing contents into information object lists.
             InformationTextbox tempTextbox;
@@ -791,12 +791,12 @@ namespace JobTicketEngine
                     }
 
                     // If it's a textbox, load the textbox
-                    if (objectType == JobTicketXMLNames.InformationTextbox)
+                    else if (objectType == JobTicketXMLNames.InformationTextbox)
                     {
                         tempTextbox = new InformationTextbox();
 
                         // Store the text of the current textbox.
-                        tempTextbox.Text = targetReadFile.ReadElementContentAsString();
+                        tempTextbox.Text = Cipher.TranspositionDecrypt(targetReadFile.ReadElementContentAsString());
 
                         // Store the name of the current textbox.
                         tempTextbox.Name = targetReadFile.ReadElementContentAsString();
@@ -832,7 +832,7 @@ namespace JobTicketEngine
                         tempCheckbox = new InformationCheckbox();
 
                         // Store the status of the current checkbox
-                        tempCheckbox.Status = Convert.ToBoolean(targetReadFile.ReadElementContentAsString());
+                        tempCheckbox.Status = Convert.ToBoolean(Cipher.TranspositionDecrypt(targetReadFile.ReadElementContentAsString()));
 
                         // Store the name of the current checkbox.
                         tempCheckbox.Name = targetReadFile.ReadElementContentAsString();

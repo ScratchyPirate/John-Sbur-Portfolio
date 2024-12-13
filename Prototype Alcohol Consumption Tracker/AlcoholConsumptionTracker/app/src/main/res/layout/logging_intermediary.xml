@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/logging_intermediary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_blind_dark_blue"
+    android:clickable="true"
+    tools:context=".Logging_Intermediary">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="266dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/title_bar" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:text="Logging"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+    <ImageButton
+        android:id="@+id/loggingIntermediaryToAlcSelect"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:scaleType="centerInside"
+        android:scaleX="1"
+        android:scaleY="1"
+        app:layout_constraintBottom_toTopOf="@+id/loggingIntermediaryToDrinkTab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loggingIntermediaryToAlcProgramming"
+        app:srcCompat="@mipmap/loggin_intermediary_drink_log" />
+
+    <ImageButton
+        android:id="@+id/loggingIntermediaryToAlcProgramming"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:scaleType="centerInside"
+        android:scaleX="1"
+        android:scaleY="1"
+        app:layout_constraintBottom_toTopOf="@+id/loggingIntermediaryToAlcSelect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:srcCompat="@mipmap/loggin_intermediary_drink_programming" />
+
+    <ImageButton
+        android:id="@+id/loggingIntermediaryToDrinkTab"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:scaleType="centerInside"
+        android:src="@mipmap/loggin_intermediary_drink_tab"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loggingIntermediaryToAlcSelect" />
+</androidx.constraintlayout.widget.ConstraintLayout>

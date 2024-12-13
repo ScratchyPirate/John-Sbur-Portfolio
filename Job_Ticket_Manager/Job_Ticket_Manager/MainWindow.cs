@@ -42,7 +42,10 @@ namespace Job_Ticket_Manager
         // Keeps track of which ticket is selected to display between all the tickets loaded in.
         private int? selectedTicketID;
 
-
+        // Marks who is logged in. Defaults to guest privileges and default username
+        private string userLoggedIn;
+        private string userPrivilege;
+        private event PropertyChangedEventHandler UserPropertyChanged = delegate { };
 
         // ******************
         // Template Tab
@@ -87,7 +90,7 @@ namespace Job_Ticket_Manager
         // General
         // ******************
         // Database where templates and tickets are stored.
-        private Database activeDatabase;
+        private ActiveDatabase activeDatabase;
         // Database where system information is stored
         private Database systemDatabase;
 
@@ -105,6 +108,15 @@ namespace Job_Ticket_Manager
             this.InitializeComponent();
             this.CenterToScreen();
 
+            // Subscribe the Update User Session function to changes made to user variables
+            this.UserPropertyChanged += this.UpdateUserSession;
+
+            // Set user constants to defaults
+            this.userLoggedIn = "";
+            this.userPrivilege = "";
+            this.UserLoggedIn = SecurityConstants.DefaultUserName;
+            this.UserPrivilege = SecurityConstants.GuestUser;
+
             // Initialize activeJobTicket to be null as well as the image list to be empty
             this.activeDatabaseJobTickets = new Dictionary<int, JobTicket>();
             this.activeDatabaseJobTickets.Clear();
@@ -120,7 +132,7 @@ namespace Job_Ticket_Manager
             this.creationTemplateBaseImage = null;
 
             // Set active and system databases.
-            this.activeDatabase = new Database();
+            this.activeDatabase = new ActiveDatabase();
             this.systemDatabase = new Database();
             // Retrieve system database information. If we can't, then initialize the system database
             // Check at the same time so see if the default document image exists and if it doesn't, initialize the system database.
@@ -135,7 +147,143 @@ namespace Job_Ticket_Manager
             }
             else
             {
-                this.SystemDatabaseLoad();
+                // Attempt to load the system database. If it fails, initialize it from scratch
+                try
+                {
+                    this.SystemDatabaseLoad();
+
+                    // If the active database loaded was the default database, proceed without loggin in
+                    if (this.activeDatabase.DatabaseName == ProjectDataBaseConstants.AppDataDirectory +
+                        ProjectDataBaseConstants.SystemDatabaseName +
+                        ProjectDataBaseConstants.DefaultActiveDatabaseName)
+                    {
+                        this.UserLoggedIn = SecurityConstants.DefaultUserName;
+                        this.UserPrivilege = SecurityConstants.AdminUser;
+                    }
+
+
+                    // Try to log in or have the user create a profile. If that fails, set the active database
+                    //  as the default database
+                    // If the database is not the default database, look for a user file. If the user file doesn't exist, initialize it and request
+                    //  admin name and login password.
+                    else
+                    {
+                        // If the user database doesn't exist, create a new admin and proceed afterwards
+                        if (this.activeDatabase.UserDatabaseInitialized == false)
+                        {
+                            // Attempt to initialize the new userdatabase. If unsuccessful, return to initial database.
+                            if (this.AddNewUserToActiveDatabase(true) == false)
+                            {
+                                this.activeDatabase.DatabaseName = ProjectDataBaseConstants.AppDataDirectory +
+                                    ProjectDataBaseConstants.SystemDatabaseName +
+                                    ProjectDataBaseConstants.DefaultActiveDatabaseName;
+                            }
+                        }
+                        // Try to log in. Log in only if user database file is available
+                        else
+                        {
+                            // Try to log in first, but have the option to change to creating a new user as an option.
+                            bool loggingIn = true;
+                            bool creatingNewUser = false;
+
+                            // Login screen
+                            LoginWindow loginWindow = new LoginWindow();
+                            loginWindow.DescriptionTextbox = SecurityMessages.LoginMessage(this.activeDatabase.DatabaseName);
+
+                            // Create screen variables
+                            do
+                            {
+                                // Log in case
+                                if (loggingIn)
+                                {
+                                    // Attempt to log in. Proceed based on output
+                                    loginWindow.ShowDialog();
+
+                                    // If cancelled, set all to false and return. Set old database as active database
+                                    if (loginWindow.CancelButtonPressed)
+                                    {
+                                        this.activeDatabase.DatabaseName = ProjectDataBaseConstants.AppDataDirectory +
+                                            ProjectDataBaseConstants.SystemDatabaseName +
+                                            ProjectDataBaseConstants.DefaultActiveDatabaseName;
+                                        loggingIn = false;
+                                        creatingNewUser = false;
+                                    }
+                                    // If new user, switch to creating a new user
+                                    else if (loginWindow.NewUserButtonPressed)
+                                    {
+                                        creatingNewUser = true;
+                                        loggingIn = false;
+                                    }
+                                    // If username and password given, try to log in. Proceed based on result
+                                    else if (loginWindow.SubmitButtonPressed && loginWindow.Success)
+                                    {
+                                        switch (this.activeDatabase.Login(loginWindow.EnteredUsername, loginWindow.EnteredPassword))
+                                        {
+                                            // Logged in successfully as admin
+                                            case (0):
+                                                // Initialize database settings
+                                                this.activeDatabase.InitializeSettings();
+
+                                                loggingIn = false;
+                                                creatingNewUser = false;
+                                                this.UserLoggedIn = loginWindow.EnteredUsername;
+                                                this.UserPrivilege = SecurityConstants.AdminUser;
+
+                                                break;
+                                            // Logged in successfully as guest
+                                            case (1):
+                                                // Initialize database settings
+                                                this.activeDatabase.InitializeSettings();
+
+                                                loggingIn = false;
+                                                creatingNewUser = false;
+                                                this.UserLoggedIn = loginWindow.EnteredUsername;
+                                                this.UserPrivilege = SecurityConstants.GuestUser;
+
+                                                break;
+                                            case (2):
+                                                DisplayMessage(ErrorMessages.LoginErrorTitle, ErrorMessages.LoginFailedUserDatabaseMissing, MessageBoxButtons.OK);
+                                                break;
+                                            case (3):
+                                                DisplayMessage(ErrorMessages.LoginErrorTitle, ErrorMessages.LoginFailedUsernameNotFound, MessageBoxButtons.OK);
+                                                break;
+                                            case (4):
+                                                DisplayMessage(ErrorMessages.LoginErrorTitle, ErrorMessages.LoginFailedIncorrectPassword, MessageBoxButtons.OK);
+                                                break;
+                                            case (5):
+                                                DisplayMessage(ErrorMessages.LoginErrorTitle, ErrorMessages.LoginFailedFileError, MessageBoxButtons.OK);
+                                                break;
+                                        }
+                                    }
+                                }
+                                // Create new user case
+                                else
+                                {
+                                    // Add new user. If unsuccessful, return to logging in.
+                                    if (!this.AddNewUserToActiveDatabase(false))
+                                    {
+                                        loggingIn = true;
+                                        creatingNewUser = false;
+                                    }
+                                    else
+                                    {
+                                        this.DisplayMessage(string.Empty, SecurityMessages.UserCreatedSuccessfully, MessageBoxButtons.OK);
+                                        loggingIn = true;
+                                        creatingNewUser = false;
+                                    }
+                                }
+                            } while (loggingIn || creatingNewUser);
+                        }
+
+                    }
+
+                    // Reinitialize
+                    this.InitializeJobTicketTab(true);
+                }
+                catch
+                {
+                    this.InitializeSystemDatabase();
+                }
             }
 
             // Set picturebox pictures to system database default document picture.
@@ -152,6 +300,18 @@ namespace Job_Ticket_Manager
             // Initialize the active database
             this.InitializeActiveDataBase();
 
+            // Security: Warn user that there is no log in for the default active database and recommend creating a new one.
+            //  Any person has read write permissions to the default database.
+            if (this.activeDatabase.DatabaseName == ProjectDataBaseConstants.AppDataDirectory +
+                ProjectDataBaseConstants.SystemDatabaseName +
+                ProjectDataBaseConstants.DefaultActiveDatabaseName)
+            {
+                this.DisplayMessage(
+                           SecurityMessages.WarningMessageTitle,
+                           SecurityMessages.DefaultActiveDatabaseWarning,
+                           MessageBoxButtons.OK);
+            }
+
             // Allows for smoother painting of images in different tabs.
             this.DoubleBuffered = true;
 
@@ -162,6 +322,39 @@ namespace Job_Ticket_Manager
 
             // Initialize the job ticket tab
             this.InitializeJobTicketTab();
+        }
+
+        /// Setter and Getter for user and user privilege
+        private string UserPrivilege
+        {
+            get
+            {
+                return this.userPrivilege;
+            }
+            set
+            {
+                if (this.userPrivilege != value)
+                {
+                    this.userPrivilege = value;
+                    this.NotifyUserPropertyChanged();
+                }
+            }
+        }
+        /// Setter and Getter for username
+        private string UserLoggedIn
+        {
+            get
+            {
+                return this.userLoggedIn;
+            }
+            set
+            {
+                if (this.userLoggedIn != value)
+                {
+                    this.userLoggedIn = value;
+                    this.NotifyUserPropertyChanged();
+                }
+            }
         }
 
         // ************************* General Functions *************************
@@ -398,11 +591,133 @@ namespace Job_Ticket_Manager
             //  selected path.
             if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
+                // Store active database in case entering the database fails
+                string oldActiveDatabaseStorage = this.activeDatabase.DatabaseName;
+
                 // Set database path
                 this.activeDatabase.DatabaseName = folderBrowserDialog.SelectedPath;
 
+                // Security: Warn user that there is no log in for the default active database and recommend creating a new one.
+                //  Any person has read write permissions to the default database.
+                if (this.activeDatabase.DatabaseName == ProjectDataBaseConstants.AppDataDirectory +
+                    ProjectDataBaseConstants.SystemDatabaseName +
+                    ProjectDataBaseConstants.DefaultActiveDatabaseName)
+                {
+                    this.DisplayMessage(
+                        SecurityMessages.WarningMessageTitle,
+                        SecurityMessages.DefaultActiveDatabaseWarning,
+                        MessageBoxButtons.OK);
+                }
+
+                // If the database is not the default database, look for a user file. If the user file doesn't exist, initialize it and request
+                //  admin name and login password.
+                else
+                {
+                    // If the user database doesn't exist, create a new admin and proceed afterwards
+                    if (this.activeDatabase.UserDatabaseInitialized == false)
+                    {
+                        // Attempt to initialize the new userdatabase. If unsuccessful, return to initial database.
+                        if (this.AddNewUserToActiveDatabase(true) == false)
+                        {
+                            this.activeDatabase = new ActiveDatabase(oldActiveDatabaseStorage);
+                        }
+                    }
+                    // Try to log in. Log in only if user database file is available
+                    else
+                    {
+                        // Try to log in first, but have the option to change to creating a new user as an option.
+                        bool loggingIn = true;
+                        bool creatingNewUser = false;
+
+                        // Login screen
+                        LoginWindow loginWindow = new LoginWindow();
+                        loginWindow.DescriptionTextbox = SecurityMessages.LoginMessage(this.activeDatabase.DatabaseName);
+
+                        // Create screen variables
+                        do
+                        {
+                            // Log in case
+                            if (loggingIn)
+                            {
+                                // Attempt to log in. Proceed based on output
+                                loginWindow.ShowDialog();
+
+                                // If cancelled, set all to false and return. Set old database as active database
+                                if (loginWindow.CancelButtonPressed)
+                                {
+                                    this.activeDatabase.DatabaseName = oldActiveDatabaseStorage;
+                                    loggingIn = false;
+                                    creatingNewUser = false;
+                                }
+                                // If new user, switch to creating a new user
+                                else if (loginWindow.NewUserButtonPressed)
+                                {
+                                    creatingNewUser = true;
+                                    loggingIn = false;
+                                }
+                                // If username and password given, try to log in. Proceed based on result
+                                else if (loginWindow.SubmitButtonPressed && loginWindow.Success)
+                                {
+                                    switch(this.activeDatabase.Login(loginWindow.EnteredUsername, loginWindow.EnteredPassword))
+                                    {
+                                        // Logged in successfully as admin
+                                        case (0):
+                                            // Initialize database settings
+                                            this.activeDatabase.InitializeSettings();
+
+                                            loggingIn = false;
+                                            creatingNewUser = false;
+                                            this.UserLoggedIn = loginWindow.EnteredUsername;
+                                            this.UserPrivilege = SecurityConstants.AdminUser;
+                                            break;
+                                        // Logged in successfully as guest
+                                        case (1):
+
+                                            // Initialize database settings
+                                            this.activeDatabase.InitializeSettings();
+
+                                            loggingIn = false;
+                                            creatingNewUser = false;
+                                            this.UserLoggedIn = loginWindow.EnteredUsername;
+                                            this.UserPrivilege = SecurityConstants.GuestUser;
+                                            break;
+                                        case (2):
+                                            DisplayMessage(ErrorMessages.LoginErrorTitle, ErrorMessages.LoginFailedUserDatabaseMissing, MessageBoxButtons.OK);
+                                            break;
+                                        case (3):
+                                            DisplayMessage(ErrorMessages.LoginErrorTitle, ErrorMessages.LoginFailedUsernameNotFound, MessageBoxButtons.OK);
+                                            break;
+                                        case (4):
+                                            DisplayMessage(ErrorMessages.LoginErrorTitle, ErrorMessages.LoginFailedIncorrectPassword, MessageBoxButtons.OK);
+                                            break;
+                                        case (5):
+                                            DisplayMessage(ErrorMessages.LoginErrorTitle, ErrorMessages.LoginFailedFileError, MessageBoxButtons.OK);
+                                            break;
+                                    }
+                                }
+                            }
+                            // Create new user case
+                            else
+                            {
+                                // Add new user. Return to logging in afterwards.
+                                if (!this.AddNewUserToActiveDatabase(false))
+                                {
+                                    loggingIn = true;
+                                    creatingNewUser = false;
+                                }
+                                else
+                                {
+                                    loggingIn = true;
+                                    creatingNewUser = false;
+                                }
+                            }
+                        } while (loggingIn || creatingNewUser);
+                    }
+                   
+                }
+
                 // Reinitialize
-                this.InitializeJobTicketTab(true);
+                this.InitializeJobTicketTab(true);        
             }
         }
 
@@ -588,6 +903,137 @@ namespace Job_Ticket_Manager
                 this.Close();
             }
         }
+        
+        /// <summary>
+        ///  When called, this function updates the main window to accomodate the new user's details
+        /// </summary>
+        private void UpdateUserSession(object? s, PropertyChangedEventArgs e)
+        {
+            // Update session header
+            this.Text = MainWindowConstants.MainWindowTitle + " [Logged in as: {Username: " + this.userLoggedIn + "} {Privilege: " + this.userPrivilege + "}]"; 
+            
+            // If the user logged in is a guest, make the template and create tab invisible
+            if (this.userPrivilege == SecurityConstants.GuestUser)
+            {
+                if (this.tabControl1.TabPages.Count == 3)
+                {
+                    this.tabControl1.TabPages.Remove(tabPage2);
+                    this.tabControl1.TabPages.Remove(tabPage3);
+                }
+
+                // After logging in, since the user that logged in isn't an admin, set the Admin menu on the Job Tickets tab to unviewable
+                this.menuStrip3.Items[3].Visible = false;
+
+                // Update admin tab settings to match active database settings.
+                if (this.activeDatabase != null)
+                {
+                    this.onToolStripMenuItem.Text = this.activeDatabase.GuestCanView.ToString();
+                }
+
+                // Set open button to be seen for an admin
+                this.openToolStripMenuItem.Visible = true;
+            }
+            // If the user logged in is an admin, readd template and create tabs if they have been made invisible
+            else if (this.userPrivilege == SecurityConstants.AdminUser)
+            {
+                if (this.tabControl1.TabPages.Count == 1)
+                {
+                    this.tabControl1.TabPages.Add(tabPage2);
+                    this.tabControl1.TabPages.Add(tabPage3);
+                }
+
+                // After logging in, since the user that logged in isn't an admin, set the Admin menu on the Job Tickets tab to unviewable
+                this.menuStrip3.Items[3].Visible = true;
+
+                // Set open button to be unseen from a normal user
+                this.openToolStripMenuItem.Visible = false;
+            }
+        }
+
+        // ************************* Security Functions *************************
+
+        /// <summary>
+        ///  Checks to see if a user database exists in the current active database. If it doesn't and the active database isn't the default database, 
+        ///     initialize the user database and prompt the user for an admin username and admin password.
+        ///  If the database does exist, try to add a guest user to the database.
+        /// </summary>
+        /// <returns>
+        ///     True if successfully created and/or added
+        ///     False if not created and/or added
+        /// </returns>
+        private bool AddNewUserToActiveDatabase(bool admin = false)
+        {
+            if (this.activeDatabase != null)
+            {
+                // If the user database already exists, don't initialize with a new user
+                try
+                {
+                    // Determines result of adding user.
+                    int result; 
+
+                    // Get first user as admin
+                    UserCreateScreen newUserScreen = new UserCreateScreen();
+                    newUserScreen.Label2 = "Password (Minimum Length = " + SecurityConstants.PasswordMinimumLength.ToString() + ")";
+                    if (admin == true)
+                    {
+                        newUserScreen.UserPrivilege = SecurityConstants.AdminUser;
+                    }
+                    else
+                    {
+                        newUserScreen.UserPrivilege = SecurityConstants.GuestUser;
+                    }
+                    newUserScreen.Description = SecurityMessages.NewActiveDatabaseMessage;
+
+                    // While the user isn't successfully created, continuously ask the 
+                    while(newUserScreen.Success == false && newUserScreen.Cancel == false)
+                    {
+                        newUserScreen.ShowDialog();
+
+                        // If cancelled, throw so that the database resets.
+                        if (newUserScreen.Cancel == true)
+                        {
+                            throw new Exception();
+                        }
+                        else
+                        {
+                            // Initialize new user database with the new admin.
+                            // If unsuccessful, repeat.
+                            result = this.activeDatabase.AddNewUser(
+                                newUserScreen.Username,
+                                newUserScreen.Password,
+                                newUserScreen.UserPrivilege,
+                                SecurityConstants.PasswordAndSaltLength
+                                );   
+                            
+                            if (result > 1)
+                            {
+                                switch (result)
+                                {
+                                    case 2:
+                                        MessageBox.Show(ErrorMessages.UsernameAlreadyExists, ErrorMessages.CreateUserErrorTitle, MessageBoxButtons.OK);
+                                        break;
+                                    case 3:
+                                        MessageBox.Show(ErrorMessages.UserDatabaseFileError, ErrorMessages.CreateUserErrorTitle, MessageBoxButtons.OK);
+                                        break;
+                                }
+                                newUserScreen.Success = false;
+                            }
+                        }
+                    }
+
+                    return true;
+                    
+                }
+                catch
+                {
+                    // On fail, mark as unsuccessful.
+                    return false;
+
+                }
+            }
+
+            return false;
+        }
 
         // ************************* Job Ticket Tab Functions *************************
         /// <summary>
@@ -705,9 +1151,7 @@ namespace Job_Ticket_Manager
                     return;
                 }
             }
-            
-
-
+ 
             // Clear datagridview 1
             this.dataGridView1.Columns.Clear();
             this.dataGridView1.Rows.Clear();
@@ -715,6 +1159,12 @@ namespace Job_Ticket_Manager
             // Clear previous dictionaries
             this.activeDatabaseJobTickets.Clear();
             this.jobTicketFilePaths.Clear();
+
+            // If the logged in user is a guest, don't display anything and return
+            if (this.userPrivilege == SecurityConstants.GuestUser)
+            {
+                return;
+            }
 
             // Look at every file inside of the JobTicket folder. For each one, try and open and load data about the job ticket to the datagridview1.
             // Load Customer Name (First, Last), File Path, and Date Last Edited
@@ -1025,6 +1475,17 @@ namespace Job_Ticket_Manager
 
             // Reload the job ticket tab
             this.InitializeJobTicketTab(true);       
+        }
+
+        /// <summary>
+        ///  Streamlined message display. 
+        /// </summary>
+        /// <param name="title"></param>
+        /// <param name="message"></param>
+        /// <param name="buttons"></param>
+        private void DisplayMessage(string title, string message, MessageBoxButtons buttons)
+        {
+            MessageBox.Show(message, title, buttons);
         }
 
         // ************************* Template Tab Functions *************************
@@ -2671,7 +3132,44 @@ namespace Job_Ticket_Manager
             }
         }
 
+        /// <summary>
+        ///     On admin guest can view pressed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void onToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Set database guest user can view to opposite of what it is currently. Save settings as well within function call.
+            this.activeDatabase.UpdateGuestsCanView(!this.activeDatabase.GuestCanView);
 
+            // Update button text
+            this.onToolStripMenuItem.Text = this.activeDatabase.GuestCanView.ToString();
+        }
+
+        /// <summary>
+        ///  On enter button being pressed in the promote user textbox, try to promote the user entered by the administrator to admin privilege.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void toolStripTextBox11_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Try to promote the entered user. Return message if failed
+                switch(this.activeDatabase.PromoteUser(this.toolStripTextBox11.Text, SecurityConstants.AdminUser))
+                {
+                    // Success case
+                    case (1):
+                        this.DisplayMessage(string.Empty, SecurityMessages.UserPromotedSuccessfully(this.toolStripTextBox11.Text), MessageBoxButtons.OK);
+                        break;
+
+                    // Failure case
+                    case (2):
+                        this.DisplayMessage(ErrorMessages.PromoteUserErrorTitle, ErrorMessages.UserDatabaseFileError, MessageBoxButtons.OK);
+                        break;
+                }
+            }
+        }
 
         // ************************* (Job Ticket Tab) Database Menu Buttons *************************
         /// <summary>
@@ -2734,6 +3232,12 @@ namespace Job_Ticket_Manager
         /// <param name="e"></param>
         private void pictureBox3_Paint(object sender, PaintEventArgs e)
         {
+            // If user logged in is a guest and guestviewable is false, don't paint and return
+            if (this.activeDatabase.GuestCanView == false && this.userPrivilege == SecurityConstants.GuestUser)
+            {
+                return;
+            }
+
             // Paint based on the current selectedJobTicketID. If id == null, don't print
             if (this.selectedTicketID == null)
             {
@@ -3923,6 +4427,16 @@ namespace Job_Ticket_Manager
                 // Save system database
                 this.SystemDatabaseSave();
             }
+        }
+
+        /// <summary>
+        ///  Notifies whenever a property of the current user is changed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void NotifyUserPropertyChanged()
+        {
+            this.UserPropertyChanged.Invoke(this, new PropertyChangedEventArgs("userPropertyChanged"));
         }
     }
 }

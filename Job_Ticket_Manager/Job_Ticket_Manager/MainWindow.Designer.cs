@@ -62,6 +62,9 @@
             this.activeDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.openToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guestsCanViewTicketsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.onToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -86,6 +89,7 @@
             this.monthToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timeStampToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.templateIDToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -95,7 +99,10 @@
             this.createToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.templateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.templateIDToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.promoteGuestUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usernameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBox11 = new System.Windows.Forms.ToolStripTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -182,7 +189,8 @@
             this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.filterToolStripMenuItem,
-            this.toolStripMenuItem3});
+            this.toolStripMenuItem3,
+            this.adminToolStripMenuItem});
             this.menuStrip3.Location = new System.Drawing.Point(3, 3);
             this.menuStrip3.Name = "menuStrip3";
             this.menuStrip3.Size = new System.Drawing.Size(1870, 24);
@@ -389,6 +397,31 @@
             this.openToolStripMenuItem1.Size = new System.Drawing.Size(166, 22);
             this.openToolStripMenuItem1.Text = "Change Database";
             this.openToolStripMenuItem1.Click += new System.EventHandler(this.openToolStripMenuItem1_Click);
+            // 
+            // adminToolStripMenuItem
+            // 
+            this.adminToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.guestsCanViewTicketsToolStripMenuItem,
+            this.toolStripSeparator4,
+            this.promoteGuestUserToolStripMenuItem});
+            this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.adminToolStripMenuItem.Text = "Admin";
+            // 
+            // guestsCanViewTicketsToolStripMenuItem
+            // 
+            this.guestsCanViewTicketsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.onToolStripMenuItem});
+            this.guestsCanViewTicketsToolStripMenuItem.Name = "guestsCanViewTicketsToolStripMenuItem";
+            this.guestsCanViewTicketsToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.guestsCanViewTicketsToolStripMenuItem.Text = "Guests Can View Tickets";
+            // 
+            // onToolStripMenuItem
+            // 
+            this.onToolStripMenuItem.Name = "onToolStripMenuItem";
+            this.onToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.onToolStripMenuItem.Text = "On";
+            this.onToolStripMenuItem.Click += new System.EventHandler(this.onToolStripMenuItem_Click);
             // 
             // tabPage2
             // 
@@ -606,6 +639,13 @@
             this.timeStampToolStripMenuItem.Text = "Time Stamp";
             this.timeStampToolStripMenuItem.Click += new System.EventHandler(this.timeStampToolStripMenuItem_Click);
             // 
+            // templateIDToolStripMenuItem1
+            // 
+            this.templateIDToolStripMenuItem1.Name = "templateIDToolStripMenuItem1";
+            this.templateIDToolStripMenuItem1.Size = new System.Drawing.Size(186, 22);
+            this.templateIDToolStripMenuItem1.Text = "Template ID";
+            this.templateIDToolStripMenuItem1.Click += new System.EventHandler(this.templateIDToolStripMenuItem1_Click);
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.panel2);
@@ -688,12 +728,31 @@
             this.toolStripTextBox1.ReadOnly = true;
             this.toolStripTextBox1.Size = new System.Drawing.Size(1736, 23);
             // 
-            // templateIDToolStripMenuItem1
+            // toolStripSeparator4
             // 
-            this.templateIDToolStripMenuItem1.Name = "templateIDToolStripMenuItem1";
-            this.templateIDToolStripMenuItem1.Size = new System.Drawing.Size(186, 22);
-            this.templateIDToolStripMenuItem1.Text = "Template ID";
-            this.templateIDToolStripMenuItem1.Click += new System.EventHandler(this.templateIDToolStripMenuItem1_Click);
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(197, 6);
+            // 
+            // promoteGuestUserToolStripMenuItem
+            // 
+            this.promoteGuestUserToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usernameToolStripMenuItem,
+            this.toolStripTextBox11});
+            this.promoteGuestUserToolStripMenuItem.Name = "promoteGuestUserToolStripMenuItem";
+            this.promoteGuestUserToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.promoteGuestUserToolStripMenuItem.Text = "Promote Guest User";
+            // 
+            // usernameToolStripMenuItem
+            // 
+            this.usernameToolStripMenuItem.Name = "usernameToolStripMenuItem";
+            this.usernameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usernameToolStripMenuItem.Text = "Username:";
+            // 
+            // toolStripTextBox11
+            // 
+            this.toolStripTextBox11.Name = "toolStripTextBox11";
+            this.toolStripTextBox11.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox11.KeyDown += new System.Windows.Forms.KeyEventHandler(this.toolStripTextBox11_KeyDown);
             // 
             // MainWindow
             // 
@@ -804,5 +863,12 @@
         private ToolStripMenuItem templateIDToolStripMenuItem;
         private ToolStripTextBox toolStripTextBox10;
         private ToolStripMenuItem templateIDToolStripMenuItem1;
+        private ToolStripMenuItem adminToolStripMenuItem;
+        private ToolStripMenuItem guestsCanViewTicketsToolStripMenuItem;
+        private ToolStripMenuItem onToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator4;
+        private ToolStripMenuItem promoteGuestUserToolStripMenuItem;
+        private ToolStripMenuItem usernameToolStripMenuItem;
+        private ToolStripTextBox toolStripTextBox11;
     }
 }

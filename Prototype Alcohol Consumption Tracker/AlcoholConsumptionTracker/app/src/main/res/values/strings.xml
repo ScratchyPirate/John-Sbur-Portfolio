@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AlcoholConsumptionTracker</string>
+    <string name="title_home">Daily Summary</string>
+    <string name="title_logging">Drink Logging</string>
+    <string name="title_reporting">Report</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="defaultText">TextView</string>
+    <string name="confirm_choice">Confirm Choice</string>
+    <string name="go_to_monthly_view">Go to Monthly View</string>
+    <string name="go_to_daily_view">Go to Daily View</string>
+    <string name="go_to_weekly_view">Go to Weekly View</string>
+</resources>

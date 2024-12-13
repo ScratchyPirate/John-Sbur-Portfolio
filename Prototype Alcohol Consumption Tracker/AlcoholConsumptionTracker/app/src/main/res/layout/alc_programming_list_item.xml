@@ -1,0 +1,178 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_blind_dark_blue"
+        android:clickable="false"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_blind_dark_blue"
+            android:clickable="false"
+            android:focusable="false"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/alcProgrammingListSpacer1"
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"
+                android:clickable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/defaultText"
+                android:visibility="invisible" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false">
+
+                <ImageView
+                    android:id="@+id/alcProgrammingTemplateBaseImage"
+                    android:layout_width="310dp"
+                    android:layout_height="100dp"
+                    android:clickable="false"
+                    android:scaleType="fitXY"
+                    android:scaleY="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/alcohol_select_blank_noselecticon" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="88dp"
+                    android:layout_height="81dp"
+                    android:layout_marginStart="4dp"
+                    android:clickable="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/alcProgrammingTemplateBaseImage"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/alcohol_select_button_with_image" />
+
+                <ImageView
+                    android:id="@+id/alcProgrammingTemplateImage"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clickable="false"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                    app:layout_constraintStart_toStartOf="@+id/imageView2"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2"
+                    app:srcCompat="@mipmap/ic_default_drink_image" />
+
+                <TextView
+                    android:id="@+id/alcProgrammingTemplateName"
+                    android:layout_width="189dp"
+                    android:layout_height="29dp"
+                    android:layout_marginStart="110dp"
+                    android:layout_marginTop="8dp"
+                    android:clickable="false"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="1"
+                    android:textAlignment="gravity"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/alcProgrammingTemplateType"
+                    android:layout_width="74dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="7dp"
+                    android:clickable="false"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/alcProgrammingTemplateName" />
+
+                <TextView
+                    android:id="@+id/alcProgrammingTemplateServings"
+                    android:layout_width="44dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:clickable="false"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/alcProgrammingTemplateType"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/alcProgrammingTemplatePrice"
+                    android:layout_width="50dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="78dp"
+                    android:layout_marginTop="6dp"
+                    android:clickable="false"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="1"
+                    app:layout_constraintStart_toEndOf="@+id/alcProgrammingTemplateType"
+                    app:layout_constraintTop_toBottomOf="@+id/alcProgrammingTemplateName" />
+
+                <TextView
+                    android:id="@+id/alcProgrammingTemplateCalories"
+                    android:layout_width="49dp"
+                    android:layout_height="23dp"
+                    android:layout_marginStart="78dp"
+                    android:layout_marginTop="4dp"
+                    android:clickable="false"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="1"
+                    app:layout_constraintStart_toEndOf="@+id/alcProgrammingTemplateServings"
+                    app:layout_constraintTop_toBottomOf="@+id/alcProgrammingTemplatePrice" />
+
+                <ImageButton
+                    android:id="@+id/drinkProgrammingTemplateEditButton"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toTopOf="@+id/drinkProgrammingTemplateDeleteButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/alcProgrammingTemplateBaseImage"
+                    app:srcCompat="@mipmap/alc_programming_edit_not_clicked" />
+
+                <ImageButton
+                    android:id="@+id/drinkProgrammingTemplateDeleteButton"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toTopOf="@+id/alcProgrammingTemplateBaseImage"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/drinkProgrammingTemplateEditButton"
+                    app:srcCompat="@mipmap/alc_programming_delete_not_clicked" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/alcProgrammingListSpacer2"
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"
+                android:clickable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/defaultText"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

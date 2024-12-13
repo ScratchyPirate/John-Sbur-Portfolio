@@ -1,0 +1,129 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="false">
+
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="319dp"
+        android:layout_height="167dp"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toStartOf="@+id/drinkTabListItemDeleteButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/drink_tab_drink_base_image" />
+
+    <ImageButton
+        android:id="@+id/drinkTabListItemDeleteButton"
+        android:layout_width="57dp"
+        android:layout_height="57dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/x_icon_not_clicked" />
+
+    <TextView
+        android:id="@+id/drinkTabListItemType"
+        android:layout_width="58dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        android:text="TextView"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/drinkTabListItemServings"
+        app:layout_constraintStart_toEndOf="@+id/drinkTabListItemImage" />
+
+    <TextView
+        android:id="@+id/drinkTabListItemName"
+        android:layout_width="172dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        android:text="TextView"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/drinkTabListItemType"
+        app:layout_constraintStart_toStartOf="@+id/drinkTabListItemType" />
+
+    <TextView
+        android:id="@+id/drinkTabListItemOccasion"
+        android:layout_width="216dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="start"
+        android:maxLines="1"
+        android:text="TextView"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/drinkTabListItemTime" />
+
+    <TextView
+        android:id="@+id/drinkTabListItemServings"
+        android:layout_width="38dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        android:text="TextView"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/drinkTabListItemOccasion"
+        app:layout_constraintStart_toEndOf="@+id/drinkTabListItemImage" />
+
+    <TextView
+        android:id="@+id/drinkTabListItemTime"
+        android:layout_width="64dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        android:text="TextView"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/drinkTabListItemImage" />
+
+    <TextView
+        android:id="@+id/drinkTabListItemCalories"
+        android:layout_width="46dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="72dp"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        android:text="TextView"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/drinkTabListItemServings"
+        app:layout_constraintStart_toEndOf="@+id/drinkTabListItemServings" />
+
+    <TextView
+        android:id="@+id/drinkTabListItemPrice"
+        android:layout_width="46dp"
+        android:layout_height="23dp"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        android:text="TextView"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/drinkTabListItemType"
+        app:layout_constraintStart_toStartOf="@+id/drinkTabListItemCalories" />
+
+    <ImageView
+        android:id="@+id/drinkTabListItemImage"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginBottom="31dp"
+        app:layout_constraintBottom_toTopOf="@+id/drinkTabListItemTime"
+        app:layout_constraintStart_toStartOf="@+id/imageView7"
+        app:srcCompat="@drawable/ic_dashboard_black_24dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
